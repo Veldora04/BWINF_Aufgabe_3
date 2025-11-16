@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        ArrayList<Vector>[] data = Reader.read("src/main/resources/hund06.txt");
+        ArrayList<Vector>[] data = Reader.read("src/main/resources/hund01.txt");
 
         double shortestDistanceToLake = Double.MAX_VALUE;
         String s = " ";
@@ -24,14 +24,12 @@ public class Main {
                         if (temp < shortestDistanceToLake) {
                             shortestDistanceToLake = temp;
                             s = lake1.toString() + "," + lake2.toString() + "," + path.toString();
-                            //System.out.println(lake1.toString() + "," + lake2.toString() + "," + path.toString());
                         }
                     } else {
                         double temp = triangle.shortestSideLengthWithThree();
                         if (temp < shortestDistanceToLake) {
                             shortestDistanceToLake = temp;
                             s = lake1.toString() + "," + lake2.toString() + "," + path.toString();
-                            //System.out.println(lake1.toString() + "," + lake2.toString() + "," + path.toString());
                         }
                     }
                 }
@@ -53,22 +51,20 @@ public class Main {
                         if (temp < shortestDistanceToLake) {
                             shortestDistanceToLake = temp;
                             s = path1.toString() + "," + path2.toString() + "," + lake.toString();
-                            //System.out.println(path1.toString() + "," + path2.toString() + "," + lake.toString());
                         }
                     } else {
                         double temp = triangle.shortestSideLengthWithThree();
                         if (temp < shortestDistanceToLake) {
                             shortestDistanceToLake = temp;
                             s = path1.toString() + "," + path2.toString() + "," + lake.toString();
-                            //System.out.println(path1.toString() + "," + path2.toString() + "," + lake.toString());
                         }
                     }
                 }
             }
         }
 
-        System.out.println(s);
-        System.out.println(shortestDistanceToLake);
+        System.out.println("From triangle: "+s);
+        System.out.println("Shortest distance: "+shortestDistanceToLake);
     }
 }
 

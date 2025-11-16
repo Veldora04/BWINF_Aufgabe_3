@@ -2,8 +2,8 @@ package com.BWINF;
 
 public class Triangle {
 
-    private Vector one;
-    private Vector two;
+    private Vector one; // just the coordinates not the sides of the Triangle
+    private Vector two; // one and two are always the base for the triangle and three the point
     private Vector three;
 
     public Triangle(Vector one, Vector two, Vector three) {
